@@ -1,0 +1,144 @@
+.team {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    .section__title {
+      margin-top: 12%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    &-wrapper {
+      width: 100%;
+      margin-top: 3%;
+    }
+
+    @include tablets {
+      flex-direction: column;
+      width: 100%;
+      &-wrapper {
+        margin-top: 2%;
+        width: 33%;
+      }
+    }
+    @include phones {
+
+      &-wrapper {
+        width: 60%;
+
+      }
+    }
+  }
+
+  &__item {
+
+    width: 24%;
+    @include tablets {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__avatar {
+    width: 100%;
+    @include tablets {
+      height: 0;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+  }
+
+  &__name {
+    font-size: rem(21px);
+    font-weight: bold;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    white-space: nowrap;
+
+
+    &:after {
+      content: url("../img/t-triangle.png");
+      margin-left: rem(4px);
+      width: rem(9px);
+      display: block;
+      // transform: rotate(180deg);
+      transform-origin: center center;
+    }
+  }
+
+  &__role {
+    position: absolute;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0;
+    transition: height .3s;
+
+    left: 0;
+    right: 0;
+
+    @include tablets {
+      position: relative;
+    }
+  }
+
+  &__role-name {
+
+  }
+
+  &__role-desc {
+    color: #666;
+    font-weight: lighter;
+    margin-top: rem(4px);
+  }
+
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: normal;
+    cursor: pointer;
+
+  }
+
+  &__link--active {
+    .team__name:after {
+      transform: rotate(180deg);
+    }
+
+    .team__avatar {
+
+    }
+  }
+
+
+  @include tablets {
+    .team__avatar {
+      height: 0;
+    }
+    .team__link--active {
+      .team__avatar {
+        height: 228px;
+        transition: height .3s;
+
+      }
+    }
+  }
+
+}

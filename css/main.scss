@@ -1,0 +1,28 @@
+$fs: 18px;
+$yc: #FFD517;
+$oc: #F8FAF9;
+$cw: 940px;
+$tablets: 768px;
+$phones: 480px;
+$sqrt2: 1.414;
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap');
+@import "media";
+@import "layout";
+
+@import "components/hero";
+@import "components/header";
+@import "components/btn";
+@import "components/benefits";
+@import "components/accordion";
+@import "components/slide";
+@import "components/team";
+@import "components/reviews";
+@import "components/order";
+@import "components/fixed-menu";
+@import "components/hamburger";
+@import "components/mySlider";
+@import "components/player";
+@import "components/popup-fade";
+@import "components/footer";

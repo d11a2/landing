@@ -1,0 +1,50 @@
+$popupWidth: 332px;
+.popup-fade {
+  display: none;
+
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.7;
+    z-index: 1000;
+  }
+
+  .popup {
+    width: $popupWidth;
+    height: 194px;
+    @include phones {
+      width: 90%;
+    }
+
+    border-radius: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    background: white;
+    border: 1px solid teal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    color: black;
+    font-size: 1.1rem;
+    padding: 31px;
+    text-align: center;
+
+    &__content {
+      margin-bottom: 25px;
+    }
+
+  }
+
+  .error {
+    color: $red;
+  }
+}
