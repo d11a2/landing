@@ -1,0 +1,237 @@
+// triangle button
+$triangleButtonHeight: 34px;
+$triangleButtonWidth: calc(#{$triangleButtonHeight} / 2);
+$squareWidth: calc(#{$triangleButtonWidth} * #{$sqrt2});
+
+$shadow: -1px 0px 3px 1px $yc;
+$insetShadow: 0px 0px 3px 1px $yc inset;
+$controlsColor: $oc;
+$durationBlockWidth: 120px;
+$red: #df2828;
+$grey: #d1caca;
+
+.player {
+  background: white;
+  display: flex;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    position: relative;
+
+    .section__title {
+      margin-top: -13%;
+    }
+  }
+
+  &__content {
+    margin-top: 3%;
+    overflow: hidden;
+    border-radius: 25px;
+    background: #F8FAF9;
+    border: 1px solid teal;
+    width: 80%;
+    max-width: 640px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-direction: column;
+    background: $controlsColor;
+    color: black;
+
+    padding: 4px 20px 17px 20px;
+  }
+
+  &__start-btn {
+    box-shadow: -2px 0px 3px -3px $red;
+
+    width: #{$triangleButtonWidth};
+    height: $triangleButtonHeight;
+    background: transparent;
+    border: 0;
+
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    position: relative;
+    overflow: hidden;
+
+    cursor: pointer;
+
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: $squareWidth;
+      height: $squareWidth;
+      border-radius: 4px;
+      box-shadow: 0px 0px 3px -1px $red;
+      background: black;
+      transform: rotate(45deg);
+      left: -71%;
+      top: 16%;
+
+    }
+
+    &.active:after {
+      background: $red;
+    }
+  }
+
+  &__playback {
+    display: block;
+    //width: 100%;
+    flex: 1;
+    height: 14px;
+    box-shadow: inset 0px 0px 3px -1px $red;
+    border-radius: 14px;
+    position: relative;
+    background-color: black;
+    margin: 0 30px;
+
+    &__progress {
+      position: relative;
+      left: 0;
+      display: block;
+      background: $red;
+      width: 0;
+      height: 14px;
+      border-radius: 14px;
+    }
+
+    &-btn {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 17px;
+      height: 17px;
+      display: block;
+      border-radius: 50%;
+      background: $grey;
+      box-shadow: 0px 0px 3px -1px $red;
+      cursor: grab;
+
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+  }
+
+  &__duration {
+    display: flex;
+    width: $durationBlockWidth;
+    justify-content: center;
+    font-size: 20px;
+
+    &-completed {
+      display: inline-block;
+
+      &:after {
+        content: ' / ';
+        display: inline-block;
+        position: relative;
+        width: 10px;
+        text-align: center;
+      }
+    }
+
+    &-estimate {
+      display: inline-block;
+    }
+  }
+
+  &__volume {
+    display: flex;
+    align-items: center;
+    height: 10px;
+    border-radius: 7px;
+    flex: 1;
+    box-shadow: 0px 0px 3px -1px $red;
+    position: relative;
+
+    background: black;
+    margin-left: 10px;
+
+    &__level {
+      position: relative;
+      height: 10px;
+      border-radius: 7px;
+      left: 0;
+      width: 100%;
+      background: white;
+      display: block;
+    }
+
+    &__btn {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      left: 100%;
+      background: $grey;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-wrapper {
+      display: flex;
+      width: 134px;
+      align-items: center;
+      margin-top: 1px;
+      margin-right: 6px;
+    }
+
+    &-img {
+      height: 17px;
+      width: 17px;
+    }
+
+    &-icon {
+      height: 100%;
+    }
+  }
+
+}
+
+#youtube-player {
+  width: 100%;
+  max-height: 360px;
+}
+
+@include tablets {
+  #youtube-player {
+    max-height: 320px;
+  }
+}
+
+@include phones {
+  #youtube-player {
+    max-height: 200px;
+  }
+  .player__playback {
+    margin: 0 10px;
+  }
+  .player__controls {
+    padding: 12px;
+  }
+  .player__content {
+    border-radius: 13px;
+  }
+  .player__duration {
+    font-size: 19px;
+  }
+}
+
+
