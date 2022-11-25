@@ -52,8 +52,3 @@ gulp.watch('./src/css/**/*.scss', gulp.series('css'));
 gulp.watch('./src/*.html', gulp.series('copy:html'));
 
 gulp.task('default', gulp.series("clean", "css", "copy:html", "server"));
-
-/*
-npm install --save normalize.css
-npm install gulp gulp-rm sass gulp-sass gulp-concat browser-sync gulp-sass-glob gulp-autoprefixer --save-dev
- */
