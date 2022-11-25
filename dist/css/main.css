@@ -402,7 +402,7 @@ ul li {
 }
 
 .accordion {
-  background: #2E77A4 url("./../../img/menuback.jpeg") center center no-repeat;
+  background: #2E77A4 url("./../img/menuback.jpeg") center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -473,15 +473,15 @@ ul li {
   }
 }
 .accordion__item:nth-child(1) .accordion__title-content {
-  background: url("./../../img/menu1_.png") left 69% center no-repeat;
+  background: url("./../img/menu1_.png") left 69% center no-repeat;
   background-size: cover;
 }
 .accordion__item:nth-child(2) .accordion__title-content {
-  background: url("./../../img/menu2_.png") left 69% center no-repeat;
+  background: url("./../img/menu2_.png") left 69% center no-repeat;
   background-size: cover;
 }
 .accordion__item:nth-child(3) .accordion__title-content {
-  background: url("./../../img/menu3_.png") left 69% center no-repeat;
+  background: url("./../img/menu3_.png") left 69% center no-repeat;
   background-size: cover;
 }
 .accordion__title-content {
@@ -724,7 +724,7 @@ ul li {
   right: 0;
   -webkit-transform: translateX(50%);
   transform: translateX(50%);
-  content: url("./../../img/Combined shape 2204.svg");
+  content: url("./../img/Combined shape 2204.svg");
 }
 @media screen and (max-width: 768px) {
   .benefits__item:before {
@@ -1006,12 +1006,12 @@ ul li {
   }
 }
 .phone:before {
-  content: url("./../../img/phone.svg");
+  content: url("./../img/phone.svg");
   margin-right: 0.3333333333rem;
 }
 
 .hero {
-  background: #2E77A4 url("./../../img/hero.png") right 15% top no-repeat;
+  background: #2E77A4 url("./../img/hero.png") right 15% top no-repeat;
   background-size: cover;
   color: #fff;
   display: -webkit-box;
@@ -1230,7 +1230,7 @@ ul li {
 
 .order {
   position: relative;
-  background: url("./../../img/order.jpeg") top left no-repeat;
+  background: url("./../img/order.jpeg") top left no-repeat;
   background-size: cover;
   color: #fff;
 }
@@ -1410,7 +1410,7 @@ ul li {
   border-radius: 0.2222222222rem;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("./../../img/checkbox.png") center center no-repeat;
+  background: url("./../img/checkbox.png") center center no-repeat;
 }
 
 .form__input--textarea {
@@ -2260,7 +2260,7 @@ ul li {
   white-space: nowrap;
 }
 .team__name:after {
-  content: url("./../../img/t-triangle.png");
+  content: url("./../img/t-triangle.png");
   margin-left: 0.2222222222rem;
   width: 0.5rem;
   display: block;
