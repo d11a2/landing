@@ -1,0 +1,12 @@
+$fs: 18px;
+$yc: #FFD517;
+$oc: #F8FAF9;
+$cw: 940px;
+$tablets: 768px;
+$phones: 480px;
+$sqrt2: 1.414;
+
+@import "media";
+@import "layout";
+@import "components/*.scss";
+
